@@ -29,4 +29,4 @@ setup :
     npm i -D prettier
     npm i -D husky
     npm i -D lint-staged
-
+    npm install -D tailwindcss @tailwindcss/vite
