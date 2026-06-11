@@ -1,28 +1,26 @@
 {
-  "vi": {
-    "common": {
-      "loading": "Đang tải...",
-      "error": "Đã xảy ra lỗi",
-      "retry": "Thử lại",
-      "back_home": "Về trang chủ",
-      "save": "Lưu",
-      "cancel": "Hủy",
-      "confirm": "Xác nhận",
-      "delete": "Xóa"
-    },
-    "auth": {
-      "login": "Đăng nhập",
-      "logout": "Đăng xuất",
-      "email": "Email",
-      "password": "Mật khẩu",
-      "login_success": "Đăng nhập thành công",
-      "login_failed": "Email hoặc mật khẩu không đúng",
-      "logout_success": "Đăng xuất thành công"
-    },
-    "errors": {
-      "page_not_found": "Không tìm thấy trang",
-      "unauthorized": "Bạn không có quyền truy cập trang này",
-      "server_error": "Lỗi máy chủ. Vui lòng thử lại sau"
-    }
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "retry": "Thử lại",
+    "back_home": "Về trang chủ",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "confirm": "Xác nhận",
+    "delete": "Xóa"
+  },
+  "auth": {
+    "login": "Đăng nhập",
+    "logout": "Đăng xuất",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "login_success": "Đăng nhập thành công",
+    "login_failed": "Email hoặc mật khẩu không đúng",
+    "logout_success": "Đăng xuất thành công"
+  },
+  "errors": {
+    "page_not_found": "Không tìm thấy trang",
+    "unauthorized": "Bạn không có quyền truy cập trang này",
+    "server_error": "Lỗi máy chủ. Vui lòng thử lại sau"
   }
 }

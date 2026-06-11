@@ -1,28 +1,26 @@
 {
-  "en": {
-    "common": {
-      "loading": "Loading...",
-      "error": "Something went wrong",
-      "retry": "Try again",
-      "back_home": "Back to home",
-      "save": "Save",
-      "cancel": "Cancel",
-      "confirm": "Confirm",
-      "delete": "Delete"
-    },
-    "auth": {
-      "login": "Login",
-      "logout": "Logout",
-      "email": "Email",
-      "password": "Password",
-      "login_success": "Login successful",
-      "login_failed": "Invalid email or password",
-      "logout_success": "Logged out successfully"
-    },
-    "errors": {
-      "page_not_found": "Page not found",
-      "unauthorized": "You are not authorized to view this page",
-      "server_error": "Server error. Please try again later"
-    }
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "back_home": "Back to home",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "login_success": "Login successful",
+    "login_failed": "Invalid email or password",
+    "logout_success": "Logged out successfully"
+  },
+  "errors": {
+    "page_not_found": "Page not found",
+    "unauthorized": "You are not authorized to view this page",
+    "server_error": "Server error. Please try again later"
   }
 }
