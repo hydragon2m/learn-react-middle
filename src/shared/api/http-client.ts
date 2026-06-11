@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { STORAGE_KEY } from '@/shared/constants/storage-key';
+import { useAuthStore } from '@/shared/stores/auth.store';
 
 export const httpClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -8,7 +8,7 @@ export const httpClient = axios.create({
 });
 
 httpClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem(STORAGE_KEY.ACCESS_TOKEN);
+  const token = useAuthStore.getState().accessToken;
 
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
