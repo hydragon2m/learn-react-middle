@@ -7,14 +7,13 @@ import { AppRouter } from '@/app/router/app-router';
 import '@/styles/global.css';
 
 async function enableMocking() {
-  // Chỉ bật MSW trong môi trường phát triển khi VITE_MSW_ENABLED=true
   if (!import.meta.env.DEV || import.meta.env.VITE_MSW_ENABLED !== 'true') {
     return;
   }
 
   const { worker } = await import('@/shared/mocks/browser');
   return worker.start({
-    onUnhandledRequest: 'bypass', // Bỏ qua các request không có handler thay vì báo lỗi
+    onUnhandledRequest: 'bypass',
   });
 }
 

@@ -4,22 +4,22 @@ import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
 
 i18n
-  .use(Backend) // Tự động tải file từ /public/locales/*.json
-  .use(LanguageDetector) // Tự động phát hiện ngôn ngữ trình duyệt
+  .use(Backend)
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'vi', // Ngôn ngữ mặc định nếu không phát hiện được
+    fallbackLng: 'vi',
     supportedLngs: ['vi', 'en'],
-    debug: import.meta.env.DEV, // Chỉ bật log ở môi trường phát triển
+    debug: import.meta.env.DEV,
     interpolation: {
-      escapeValue: false, // React đã tự escape HTML
+      escapeValue: false,
     },
     backend: {
       loadPath: '/locales/{{lng}}.json',
     },
     detection: {
       order: ['localStorage', 'navigator'],
-      caches: ['localStorage'], // Ghi nhớ lựa chọn ngôn ngữ của người dùng
+      caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
     },
   });
