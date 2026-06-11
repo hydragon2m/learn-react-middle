@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { type PropsWithChildren, useEffect } from 'react';
+import { Toaster } from 'sonner';
 
 import { getProfileApi } from '@/features/auth/api/auth.api';
 import { ErrorBoundary } from '@/shared/components/error-boundary';
@@ -26,9 +27,6 @@ function AuthInitializer({ children }: PropsWithChildren) {
   useEffect(() => {
     const isCookieMode = import.meta.env.VITE_AUTH_MODE === 'cookie';
 
-    // Điều kiện gọi API profile để phục hồi session:
-    // 1. Chế độ Cookie: Luôn gọi vì token nằm trong cookie ẩn.
-    // 2. Chế độ Token: Chỉ gọi khi đã có sẵn accessToken trong localStorage.
     if (isCookieMode || accessToken) {
       getProfileApi()
         .then((data) => {
@@ -44,7 +42,6 @@ function AuthInitializer({ children }: PropsWithChildren) {
           setLoading(false);
         });
     } else {
-      // Chế độ Token nhưng chưa đăng nhập
       setLoading(false);
     }
   }, [setAuth, logout, setLoading, accessToken]);
@@ -60,7 +57,11 @@ export function AppProvider({ children }: PropsWithChildren) {
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        <AuthInitializer>{children}</AuthInitializer>
+        <AuthInitializer>
+          {children}
+          {/* Toast notifications – dùng: import { toast } from 'sonner'; toast.success('...') */}
+          <Toaster position="top-right" richColors closeButton />
+        </AuthInitializer>
       </QueryClientProvider>
     </ErrorBoundary>
   );
