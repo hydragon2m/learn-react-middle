@@ -22,7 +22,7 @@ export type LoginPayload = {
 
 export type LoginResponse = {
   user: User;
-  accessToken: string;
+  accessToken?: string;
 };
 
 export type ProfileResponse = {

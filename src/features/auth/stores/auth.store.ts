@@ -1,11 +1,10 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
+import { isCookieAuthMode } from '@/shared/config/auth-mode';
 import { STORAGE_KEY } from '@/shared/constants/storage-key';
 
 import type { AuthState } from '../types/auth.type';
-
-const isCookieMode = import.meta.env.VITE_AUTH_MODE === 'cookie';
 
 export const useAuthStore = create<AuthState>()(
   persist(
@@ -13,12 +12,12 @@ export const useAuthStore = create<AuthState>()(
       user: null,
       accessToken: null,
       isAuthenticated: false,
-      isLoading: false,
+      isLoading: isCookieAuthMode,
 
       setAuth: ({ user, accessToken }) => {
         set({
           user,
-          accessToken: isCookieMode ? null : accessToken || null,
+          accessToken: isCookieAuthMode ? null : accessToken || null,
           isAuthenticated: true,
           isLoading: false,
         });
@@ -36,17 +35,18 @@ export const useAuthStore = create<AuthState>()(
       },
     }),
     {
-      name: STORAGE_KEY.ACCESS_TOKEN,
+      name: STORAGE_KEY.AUTH,
       storage: createJSONStorage(() => localStorage),
       partialize: (state) => ({
-        accessToken: isCookieMode ? null : state.accessToken,
+        accessToken: isCookieAuthMode ? null : state.accessToken,
       }),
       onRehydrateStorage: () => (state) => {
-        if (!state || isCookieMode) {
+        if (!state || isCookieAuthMode) {
           return;
         }
 
         state.isAuthenticated = Boolean(state.accessToken);
+        state.isLoading = Boolean(state.accessToken);
       },
     },
   ),
