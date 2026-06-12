@@ -29,7 +29,12 @@
     "back_to_login": "Quay lại đăng nhập",
     "login_success": "Đăng nhập thành công",
     "login_failed": "Email hoặc mật khẩu không đúng",
-    "logout_success": "Đăng xuất thành công"
+    "logout_success": "Đăng xuất thành công",
+    "validation": {
+      "email_required": "Vui lòng nhập email",
+      "email_invalid": "Email không hợp lệ",
+      "password_required": "Vui lòng nhập mật khẩu"
+    }
   },
   "errors": {
     "page_not_found": "Không tìm thấy trang",
