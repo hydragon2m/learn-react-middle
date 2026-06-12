@@ -77,7 +77,7 @@ export function LoginPage() {
   }
 
   return (
-    <main className="relative flex flex-1 items-center justify-center p-4 md:p-8 overflow-hidden bg-gradient-to-tr from-slate-50 via-zinc-100 to-indigo-50/50 dark:from-zinc-950 dark:via-slate-900 dark:to-zinc-950 transition-colors duration-300">
+    <main className="relative flex flex-1 items-start justify-center p-4 md:p-8 pt-12 md:pt-24 overflow-hidden bg-gradient-to-tr from-slate-50 via-zinc-100 to-indigo-50/50 dark:from-zinc-950 dark:via-slate-900 dark:to-zinc-950 transition-colors duration-300">
       {/* Dynamic light effects/blobs */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 rounded-full bg-primary/10 dark:bg-primary/5 blur-3xl pointer-events-none animate-pulse duration-[6000ms]" />
       <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-72 h-72 md:w-96 md:h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-500/5 blur-3xl pointer-events-none animate-pulse duration-[8000ms]" />
