@@ -29,7 +29,12 @@
     "back_to_login": "Back to login",
     "login_success": "Login successful",
     "login_failed": "Invalid email or password",
-    "logout_success": "Logged out successfully"
+    "logout_success": "Logged out successfully",
+    "validation": {
+      "email_required": "Email is required",
+      "email_invalid": "Invalid email address",
+      "password_required": "Password is required"
+    }
   },
   "errors": {
     "page_not_found": "Page not found",
