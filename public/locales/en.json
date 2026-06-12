@@ -9,6 +9,9 @@
     "confirm": "Confirm",
     "delete": "Delete"
   },
+  "header": {
+    "app_name": "Learn React"
+  },
   "auth": {
     "login": "Login",
     "logout": "Logout",
@@ -32,5 +35,10 @@
     "page_not_found": "Page not found",
     "unauthorized": "You are not authorized to view this page",
     "server_error": "Server error. Please try again later"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   }
 }

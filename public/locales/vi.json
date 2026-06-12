@@ -9,6 +9,9 @@
     "confirm": "Xác nhận",
     "delete": "Xóa"
   },
+  "header": {
+    "app_name": "Học React"
+  },
   "auth": {
     "login": "Đăng nhập",
     "logout": "Đăng xuất",
@@ -32,5 +35,10 @@
     "page_not_found": "Không tìm thấy trang",
     "unauthorized": "Bạn không có quyền truy cập trang này",
     "server_error": "Lỗi máy chủ. Vui lòng thử lại sau"
+  },
+  "theme": {
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Hệ thống"
   }
 }

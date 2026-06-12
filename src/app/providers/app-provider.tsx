@@ -3,6 +3,7 @@ import { type PropsWithChildren } from 'react';
 import { Toaster } from 'sonner';
 
 import { ErrorBoundary } from '@/shared/components/error-boundary';
+import { ThemeProvider } from '@/app/providers/theme-provider';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -18,8 +19,10 @@ export function AppProvider({ children }: PropsWithChildren) {
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        {children}
-        <Toaster position="top-right" richColors closeButton />
+        <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+          {children}
+          <Toaster position="top-right" richColors closeButton />
+        </ThemeProvider>
       </QueryClientProvider>
     </ErrorBoundary>
   );
